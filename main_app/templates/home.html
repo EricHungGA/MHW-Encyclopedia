@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
 
 <h1>{{ monster_1 }}</h1>
 
@@ -13,7 +16,7 @@
 <br>
 
 {% for monster in all_monsters %}
-    {% if monster.type != 'small' or monster.type != 'large' %}
+    {% if monster.type == 'large' %}
         <p>{{ monster.name }}</p>
     {% endif %}
 {% endfor %}
