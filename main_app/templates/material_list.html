@@ -7,8 +7,8 @@
 {% for item in user_material_list %}
     <li>
         {{ item.item }} 
-        <a href="{% url 'material_list_item_delete' item.id %}">Delete</a> 
-        <a href="{% url 'material_list_item_update' item.id %}">Update</a> 
+        <a href="{% url 'material_list_item_update' item.id %}">[ Update ]</a> 
+        <a href="{% url 'material_list_item_delete' item.id %}">[ &#x2713; ]</a> 
     </li>
 {% endfor %}
 </ul>
@@ -20,3 +20,4 @@
 </form>
 
 {% endblock %}
+

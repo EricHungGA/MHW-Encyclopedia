@@ -204,3 +204,8 @@ p.element {
     display: inline;
     margin-right: 2px;
 }
+
+.strike-through {
+    text-decoration: line-through;
+  }
+  
