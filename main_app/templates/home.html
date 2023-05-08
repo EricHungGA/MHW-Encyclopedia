@@ -100,19 +100,4 @@
 
 </script>
 
-<h1>{{ monster_1 }}</h1>
-
-<br>
-
-{% for key, value in monster_1.items %}
-    <p>{{ key }}: {{ value }}</p>
-{% endfor %}
-
-<br>
-
-{% for monster in all_monsters %}
-    {% if monster.type == 'large' %}
-        <p>{{ monster.name }}</p>
-    {% endif %}
-{% endfor %}
 {% endblock %}

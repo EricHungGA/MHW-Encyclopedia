@@ -37,3 +37,5 @@ def monster_detail(request, monster_name):
     monster = requests.get(url).json()[0]
     return render(request, 'monster_detail.html', {'monster': monster})
 
+def material_list(request):
+    pass

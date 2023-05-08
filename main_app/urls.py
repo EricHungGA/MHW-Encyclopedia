@@ -8,7 +8,8 @@ urlpatterns = [
     path('accounts/signup/', views.signup, name='signup'),
     path('large_monsters/', views.large_monsters, name='large_monsters'),
     path('small_monsters/', views.small_monsters, name='small_monsters'),
-    path('small_monster/<str:monster_name>', views.monster_detail, name='monster_detail'),
+    path('monster/<str:monster_name>', views.monster_detail, name='monster_detail'),
+    path('material_list', views.material_list, name='material_list'),
 ]
 
 if settings.DEBUG:
