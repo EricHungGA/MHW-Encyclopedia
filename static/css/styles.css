@@ -200,3 +200,7 @@ nav ul li a {
     bottom: 10px;
   }
   
+p.element {
+    display: inline;
+    margin-right: 2px;
+}

@@ -3,7 +3,29 @@
 
 <h1>Monster Detail page</h1>
 
-<h2>{{ monster.name }}</h2>
+<h1>{{ monster.name }}</h1>
+<p>Species: {{ monster.species }}</p>
+<p>Description: {{ monster.description }}</p>
+
+{% if monster.elements %}
+    <p class="element">Elements:</p>
+    {% for element in monster.elements %}
+        <p class="element">{{ element }}</p>
+    {% endfor %}
+{% else %}
+    <p>Elements: None</p>
+{% endif %}
+
+{% if monster.ailments %}
+    <p>Ailment: {{ monster.ailments.0.name }}</p>
+    <p>Ailment Description: {{ monster.ailments.0.description }}</p>
+{% endif %}
+
+<p>Location: {{ monster.locations.0.name }}</p>
+<p>Resistances: {{ monster.resistances.0.element }}</p>
+<p>Weaknesses: {{ monster.weaknesses.0.element }}</p>
+<p>Weakness Rating(1-5): {{ monster.weaknesses.0.stars }}</p>
+
 <h2>{{ monster }}</h2>
 
 {% endblock %}
