@@ -47,6 +47,7 @@ def material_list(request):
 class Material_List_ItemCreate(CreateView):
     model = Material_List_Item
     fields = ['item']
+    success_url = '/material_list'
 
     def form_valid(self, form):
     # Assign the logged in user (self.request.user)
@@ -55,4 +56,9 @@ class Material_List_ItemCreate(CreateView):
     
 class Material_List_ItemDelete(DeleteView):
     model = Material_List_Item
+    success_url = '/material_list'
+
+class Material_List_ItemUpdate(UpdateView):
+    model = Material_List_Item
+    fields = ['item']
     success_url = '/material_list'

@@ -8,6 +8,7 @@
     <li>
         {{ item.item }} 
         <a href="{% url 'material_list_item_delete' item.id %}">Delete</a> 
+        <a href="{% url 'material_list_item_update' item.id %}">Update</a> 
     </li>
 {% endfor %}
 </ul>
