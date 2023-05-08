@@ -3,6 +3,9 @@ import requests
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Material_List_Item
+
 
 def home(request):
     response=requests.get('https://mhw-db.com/monsters/2').json()
@@ -38,4 +41,18 @@ def monster_detail(request, monster_name):
     return render(request, 'monster_detail.html', {'monster': monster})
 
 def material_list(request):
-    pass
+    user_material_list = Material_List_Item.objects.filter(user=request.user)
+    return render(request, 'material_list.html', {'user_material_list':user_material_list})
+
+class Material_List_ItemCreate(CreateView):
+    model = Material_List_Item
+    fields = ['item']
+
+    def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+        form.instance.user = self.request.user  # form.instance is the item
+        return super().form_valid(form)
+    
+class Material_List_ItemDelete(DeleteView):
+    model = Material_List_Item
+    success_url = '/material_list'

@@ -10,6 +10,8 @@ urlpatterns = [
     path('small_monsters/', views.small_monsters, name='small_monsters'),
     path('monster/<str:monster_name>', views.monster_detail, name='monster_detail'),
     path('material_list', views.material_list, name='material_list'),
+    path('material_list_item/create', views.Material_List_ItemCreate.as_view(), name='material_list_item_create'),
+    path('material_list_item/<int:pk>/delete/', views.Material_List_ItemDelete.as_view(), name='material_list_item_delete'),
 ]
 
 if settings.DEBUG:

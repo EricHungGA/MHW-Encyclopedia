@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Hunter Materials - Wanted</h1>
+
+<ul>
+{% for item in user_material_list %}
+    <li>
+        {{ item.item }} 
+        <a href="{% url 'material_list_item_delete' item.id %}">Delete</a> 
+    </li>
+{% endfor %}
+</ul>
+
+<form action="{% url 'material_list_item_create' %}" method="POST">
+    {% csrf_token %}
+    {{ material_list_item_form.as_p }}
+    <input type="submit" class="btn" value="Add Item">
+</form>
+
+{% endblock %}
