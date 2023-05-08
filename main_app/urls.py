@@ -6,6 +6,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.home, name='home'),
     path('accounts/signup/', views.signup, name='signup'),
+    path('large_monsters/', views.large_monsters, name='large_monsters'),
+    path('small_monsters/', views.small_monsters, name='small_monsters'),
+    path('small_monster/<str:monster_name>', views.monster_detail, name='monster_detail'),
 ]
 
 if settings.DEBUG:

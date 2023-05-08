@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Small monsters!</h1>
+
+<h1>{{ small_monsters|length }}</h1>
+
+{% for monster in small_monsters %}
+    <p>{{ monster.name }}</p>
+{% endfor %}
+
+{% endblock %}

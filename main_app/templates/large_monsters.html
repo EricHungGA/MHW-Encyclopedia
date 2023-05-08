@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>large monsters!</h1>
+
+{% for monster in large_monsters %}
+    <a href="{% url 'monster_detail' monster.name %}">
+    <p>{{ monster.name }}</p>
+    </a>
+{% endfor %}
+
+{% endblock %}
