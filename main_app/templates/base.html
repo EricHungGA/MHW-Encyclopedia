@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/13ce16ac43.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -44,8 +45,54 @@
         {% endblock %}
     </main>
 
-    <footer>
-        <h2>footer!</h2>
+  <footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Steam -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://store.steampowered.com/app/582010/Monster_Hunter_World/" role="button" target="_blank">
+        <i class="fa-brands fa-steam"></i>
+      </a>
+
+      <!-- DO NOT CLICK THIS LINK -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" role="button" target="_blank">
+        <i class="fa-solid fa-ghost"></i>
+      </a>
+
+      <!-- Youtube -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=OotQrKEqe94&ab_channel=MonsterHunter" role="button" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/monsterhuntergame/?hl=en" role="button" target="_blank"
+        ><i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/erichungdev/" role="button" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/EricHungGA/MHW-Encyclopedia" role="button" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+<!-- End of .container -->
+
     </footer>
     <script>
        $(document).ready(function() {
