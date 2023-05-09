@@ -2,6 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Fogtwo No.5', sans-serif;
+    color:#7d8e81;
 }
 
 
@@ -20,7 +22,7 @@ body::before {
 }
 
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Fogtwo No.5', sans-serif;
   font-weight: lighter;
   position: relative;
   background-color: #0a170b;
@@ -35,7 +37,7 @@ main {
     position: fixed;
     float: left;
     margin: 16px 46px;
-    color: white;
+    color: #556959;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
@@ -74,8 +76,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #bdc3be;
     font-size: 16px;
+}
+
+nav ul li a:hover {
+  color:#3c4d31;
 }
 
 .menu-icon {
@@ -230,4 +236,8 @@ p.element5{
   
 .home-carousel-title {
   color: #7d8e81;
+}
+
+footer {
+  opacity:0.75;
 }
