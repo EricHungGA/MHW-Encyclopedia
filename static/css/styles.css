@@ -6,7 +6,6 @@ html, body {
     color:#7d8e81;
 }
 
-
 body::before {
   content: '';
   position: absolute;
@@ -236,7 +235,9 @@ p.element5{
   
 .home-carousel-title {
   color: #7d8e81;
+  font-size: 1.4rem;
 }
+
 
 footer {
   opacity:0.75;
