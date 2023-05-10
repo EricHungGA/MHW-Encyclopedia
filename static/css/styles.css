@@ -29,6 +29,7 @@ body {
 
 main {
     padding-top: 80px;
+    height: 100vh;
 }
 
 .logo {
@@ -135,7 +136,6 @@ nav ul li a:hover {
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
-    margin-top: 30rem;
   }
   
   #carousel div {
@@ -150,7 +150,7 @@ nav ul li a:hover {
   }
 
   #carousel div img:hover {
-    transform: translateZ(0) scale(1.02);
+    transform: translateZ(0) scale(1.005);
     opacity: .6;
     filter: gray;
     -webkit-filter: grayscale(1);
@@ -225,11 +225,15 @@ nav ul li a:hover {
     width: 200px;
   }
   
-  .buttons {
+  /* .buttons {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
+  } */
+
+  .buttons {
+    margin-top: 15rem;
   }
   
 p.element5{
