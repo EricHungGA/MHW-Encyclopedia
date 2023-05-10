@@ -148,6 +148,14 @@ nav ul li a:hover {
     width: 400px;
     transition: width 1s;
   }
+
+  #carousel div img:hover {
+    transform: translateZ(0) scale(1.02);
+    opacity: .6;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .8s ease-in-out;
+  }
   
   #carousel div.hideLeft {
     left: 0%;
