@@ -24,7 +24,7 @@ body {
   font-family: 'Fogtwo No.5', sans-serif;
   font-weight: lighter;
   position: relative;
-  background-color: #0a170b;
+  background-color: #0a170b !important;
 }
 
 main {
