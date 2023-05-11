@@ -11,3 +11,7 @@ class Material_List_Item(models.Model):
 
     def get_absolute_url(self):
         return reverse('home')
+    
+class Monster_Image(models.Model):
+    name = models.CharField()
+    image = models.CharField()
