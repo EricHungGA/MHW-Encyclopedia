@@ -7,16 +7,26 @@
     }
 
     img:hover {
-        opacity:0.5;
-    }
-
-    #carouselExampleCaptions {
-        
+        box-shadow: inset 2px 2px 40px #362b26, inset -2px -2px 40px #362b26;
+        transition: box-shadow 1s ease-in-out;
     }
 
     .d-block {
-        padding: 4.5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 8.5rem;
+        padding-top: 1.5rem;
+        box-shadow:none;
     }
+
+    h5 {
+        color:#556959;
+    }
+
+    p {
+        color:#7d8e81;
+    }
+
 </style>
     
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
@@ -70,7 +80,7 @@
         <!-- first carousel item with class active -->
       <div class="carousel-item active">
         <a href="{% url 'monster_detail' 'Great Jagras' %}">
-        <img src="https://wallpapercave.com/wp/wp4553978.png" class="d-block w-75 mx-auto border border-5" alt="..." style="height:45rem">
+        <img src="https://wallpapercave.com/wp/wp4553978.png" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Great Jagras</h5>
@@ -83,7 +93,7 @@
             {% if monster.name == mon.name %}
         <div class="carousel-item">
             <a href="{% url 'monster_detail' monster.name %}">
-            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-5" alt="..." style="height:45rem">
+            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
             <div class="carousel-caption d-none d-md-block">
             <h5>{{ monster.name }}</h5>
             <p>{{ monster.description }}</p>
