@@ -1,12 +1,58 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="mt-20 text-xl">Log In</div>
-<form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn">Log In</button>
-  </form>
+<style>
+  body {
+    color:#7d8e81;
+    background-image: url('https://res.cloudinary.com/di8ugfihk/image/upload/v1683929018/pngwing.com_alv0xb.png');
+    background-size:80vh;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 40%;
+  }
+  
+  .btn {
+    color:#7d8e81;
+    border-color:#7d8e81;
+  }
+
+  .btn:hover {
+    opacity:0.4;
+  }
+
+  .main-container {
+    place-items: center;
+    padding-top: 15rem;
+  }
+
+  form {
+    display: grid;
+    place-items:center;
+  }
+
+  input {
+    width:100%;
+  }
+
+  .title {
+    padding-bottom: 1rem;
+  }
+
+  label {
+    display:grid;
+    place-content:center;
+  }
+
+</style>
+
+  <div class="d-grid main-container">
+    <h4 class="title">Enter Your Hunter Credentials</h4>
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}">
+        <button type="submit" class="btn">Access Hunter Database</button>
+      </form>
+  </div>
 
 {% endblock %}

@@ -1,14 +1,69 @@
 {% extends 'base.html' %}
+
 {% block content %}
+<style>
+  body {
+    color: #7d8e81;
+    background-image: url('https://res.cloudinary.com/di8ugfihk/image/upload/v1683929018/pngwing.com_alv0xb.png');
+    background-size: 88vh;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+  }
+  
+  .btn {
+    color: #7d8e81;
+    border-color: #7d8e81;
+  }
 
-<h1 class="mt-20">Sign Up</h1>
+  .btn:hover {
+    opacity: 0.4;
+  }
 
-<p class="red-text">{{ error_message }}</p>
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-<form method="POST" action="{% url 'signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="Sign Up">
-</form>
+  form {
+    display: grid;
+    grid-gap: 0.4rem;
+    place-items: center;
+    max-width: 400px;
+    width: 90%;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #7d8e81;
+    outline: none;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  .red-text {
+    color: red;
+  }
+
+</style>
+
+<div class="main-container">
+  <form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <h4 class="title">Join The Hunters Guild</h4>
+    <p class="red-text">{{ error_message }}</p>
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Sign Up">
+  </form>
+</div>
 
 {% endblock %}
