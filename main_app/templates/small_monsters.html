@@ -53,7 +53,7 @@
 
         <!-- first carousel item with class active -->
       <div class="carousel-item active">
-        <a href="{% url 'monster_detail' 'Aptonoth' %}">
+        <a href="{% url 'small_monster_detail' 'Aptonoth' %}">
         <img src="https://static.wikia.nocookie.net/monsterhunter/images/4/47/MHW-Aptonoth_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20180209035147" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
         </a>
         <div class="carousel-caption d-none d-md-block">
@@ -66,7 +66,7 @@
         {% for mon in small_monster_images %}
             {% if monster.name == mon.name %}
         <div class="carousel-item">
-            <a href="{% url 'monster_detail' monster.name %}">
+            <a href="{% url 'small_monster_detail' monster.name %}">
             <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
             <div class="carousel-caption d-none d-md-block">
             <h5>{{ monster.name }}</h5>

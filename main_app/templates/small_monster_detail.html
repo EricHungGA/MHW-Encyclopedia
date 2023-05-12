@@ -23,19 +23,18 @@
 
     img {
         width: 50%;
-        max-height: 85vh;
     }
 
     .text-container {
         text-align: center;
-        min-height: 65vh;
+        min-height: 60vh;
     }
 </style>
 
 <div class="d-grid top-container">
 <div class="d-flex flex-column w-100 bg-dark bg-opacity-75 align-items-center main-container">
-    {% if monster.name == 'Great Jagras' %}
-        <img src="https://wallpapercave.com/wp/wp4553978.png" alt="">
+    {% if monster.name == 'Aptonoth' %}
+        <img src="https://static.wikia.nocookie.net/monsterhunter/images/4/47/MHW-Aptonoth_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20180209035147" alt="">
     {% else %}
     {% for mon in monster_images %}
         {% if monster.name == mon.name %}

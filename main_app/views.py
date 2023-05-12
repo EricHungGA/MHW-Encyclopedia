@@ -41,7 +41,16 @@ def small_monsters(request):
 def monster_detail(request, monster_name):
     url = f'https://mhw-db.com/monsters?q={{"name":"{monster_name}"}}'
     monster = requests.get(url).json()[0]
-    return render(request, 'monster_detail.html', {'monster': monster})
+    monster_images = Monster_Image.objects.all()
+    return render(request, 'monster_detail.html', {'monster': monster, 'monster_images':monster_images})
+
+def small_monster_detail(request, monster_name):
+    url = f'https://mhw-db.com/monsters?q={{"name":"{monster_name}"}}'
+    monster = requests.get(url).json()[0]
+    monster_images = Small_Monster_Image.objects.all()
+    return render(request, 'small_monster_detail.html', {'monster': monster, 'monster_images':monster_images})
+
+
 
 @login_required
 def material_list(request):
