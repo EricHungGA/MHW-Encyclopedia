@@ -30,6 +30,7 @@
         text-align: center;
         min-height: 65vh;
     }
+
 </style>
 
 <div class="d-grid top-container">
@@ -49,9 +50,10 @@
     <p><strong>Description: </strong> {{ monster.description }}</p>
 
     {% if monster.elements %}
-        <p class="element"><strong>Elements: </strong></p>
+        <p class="element mr-10px"><strong>Elements: </strong>
         {% for element in monster.elements %}
-            <p class="element">{{ element }}</p>
+           {{ element }}
+        </p>
         {% endfor %}
     {% else %}
         <p><strong>Elements: </strong> None</p>

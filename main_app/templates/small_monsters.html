@@ -7,15 +7,15 @@
     }
 
     img:hover {
-        box-shadow: inset 2px 2px 40px #362b26, inset -2px -2px 40px #362b26;
+        box-shadow: 2px 2px 10px #FFDA87, -2px -2px 10px #FFDA87;
         transition: box-shadow 1s ease-in-out;
     }
 
     .d-block {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        padding-bottom: 8.5rem;
-        padding-top: 1.5rem;
+        padding-left: 13rem;
+        padding-right: 13rem;
+        padding-bottom: 10.5rem;
+        padding-top: 4rem;
         box-shadow:none;
     }
 
@@ -25,6 +25,13 @@
 
     p {
         color:#7d8e81;
+    }
+
+    img{
+        background-image: url('https://res.cloudinary.com/di8ugfihk/image/upload/v1683927341/image-from-rawpixel-id-2644944-original_alsk2i.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 85%;
     }
 
 </style>
@@ -54,7 +61,7 @@
         <!-- first carousel item with class active -->
       <div class="carousel-item active">
         <a href="{% url 'small_monster_detail' 'Aptonoth' %}">
-        <img src="https://static.wikia.nocookie.net/monsterhunter/images/4/47/MHW-Aptonoth_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20180209035147" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
+        <img src="https://static.wikia.nocookie.net/monsterhunter/images/4/47/MHW-Aptonoth_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20180209035147" class="d-block mx-auto" alt="..." style="height:45rem">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Aptonoth</h5>
@@ -67,7 +74,7 @@
             {% if monster.name == mon.name %}
         <div class="carousel-item">
             <a href="{% url 'small_monster_detail' monster.name %}">
-            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
+            <img src="{{mon.image}}" class="d-block mx-auto" alt="..." style="height:45rem">
             <div class="carousel-caption d-none d-md-block">
             <h5>{{ monster.name }}</h5>
             <p>{{ monster.description }}</p>

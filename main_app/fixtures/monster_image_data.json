@@ -1,10 +1,10 @@
 [
     {
         "model": "main_app.Monster_Image",
-        "pk": 2,
+        "pk": 42,
         "fields": {
-            "name": "Kulu-Ya-Ku",
-            "image": "https://res.cloudinary.com/di8ugfihk/image/upload/v1683910259/kulu_ya_ku_tbz4eh_3_1_basbqg.png"
+            "name": "Zinogre",
+            "image": "https://static.wikia.nocookie.net/monsterhunter/images/3/37/MHRise-Zinogre_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20210308141128"
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 3,
         "fields": {
             "name": "Pukei-Pukei",
-            "image": "https://wallpapercave.com/dwp1x/wp4568125.png"
+            "image": "https://static.wikia.nocookie.net/monsterhunter/images/1/13/MHRise-Pukei-Pukei_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20210308150521"
         }
     },
     {
@@ -321,10 +321,10 @@
     },
     {
         "model": "main_app.Monster_Image",
-        "pk": 42,
+        "pk": 2,
         "fields": {
-            "name": "Zinogre",
-            "image": "https://static.wikia.nocookie.net/monsterhunter/images/3/37/MHRise-Zinogre_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20210308141128"
+            "name": "Kulu-Ya-Ku",
+            "image": "https://res.cloudinary.com/di8ugfihk/image/upload/v1683910259/kulu_ya_ku_tbz4eh_3_1_basbqg.png"
         }
     }
 ]
