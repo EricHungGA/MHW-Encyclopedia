@@ -1,14 +1,6 @@
 [
     {
         "model": "main_app.Monster_Image",
-        "pk": 1,
-        "fields": {
-            "name": "Great Jagras",
-            "image": "https://wallpapercave.com/wp/wp4553978.png"
-        }
-    },
-    {
-        "model": "main_app.Monster_Image",
         "pk": 2,
         "fields": {
             "name": "Kulu-Ya-Ku",
