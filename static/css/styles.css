@@ -25,16 +25,15 @@ body {
   font-weight: lighter;
   position: relative;
   background-color: #0a170b !important;
+  min-height: 100vh;
 }
 
 main {
-    padding-top: 80px;
-    height: 100vh;
+  min-height: 100vh;
 }
 
 .logo {
     line-height: 60px;
-    position: fixed;
     float: left;
     margin: 16px 46px;
     color: #556959;
@@ -44,7 +43,6 @@ main {
 }
 
 nav {
-    position: fixed;
     width: 100%;
     line-height: 60px;
     z-index: 20;

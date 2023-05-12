@@ -9,6 +9,14 @@
     img:hover {
         opacity:0.5;
     }
+
+    #carouselExampleCaptions {
+        
+    }
+
+    .d-block {
+        padding: 4.5rem;
+    }
 </style>
     
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
@@ -56,14 +64,13 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="40" aria-label="Slide 41"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="41" aria-label="Slide 42"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="42" aria-label="Slide 43"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="43" aria-label="Slide 44"></button>
     </div>
     <div class="carousel-inner">
 
         <!-- first carousel item with class active -->
       <div class="carousel-item active">
         <a href="{% url 'monster_detail' 'Great Jagras' %}">
-        <img src="https://wallpapercave.com/wp/wp4553978.png" class="d-block w-75 mx-auto border border-5" alt="..." style="height:40rem">
+        <img src="https://wallpapercave.com/wp/wp4553978.png" class="d-block w-75 mx-auto border border-5" alt="..." style="height:45rem">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Great Jagras</h5>
@@ -76,7 +83,7 @@
             {% if monster.name == mon.name %}
         <div class="carousel-item">
             <a href="{% url 'monster_detail' monster.name %}">
-            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-5" alt="..." style="height:40rem">
+            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-5" alt="..." style="height:45rem">
             <div class="carousel-caption d-none d-md-block">
             <h5>{{ monster.name }}</h5>
             <p>{{ monster.description }}</p>
