@@ -1,14 +1,93 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Small monsters!</h1>
+<style>
+    .carousel-inner {
+        margin-top:3rem;
+    }
 
-<h1>{{ small_monsters|length }}</h1>
+    img:hover {
+        box-shadow: inset 2px 2px 40px #362b26, inset -2px -2px 40px #362b26;
+        transition: box-shadow 1s ease-in-out;
+    }
 
-{% for monster in small_monsters %}
-    <a href="{% url 'monster_detail' monster.name %}">
-        <p>{{ monster.name }}</p>
-    </a>
-{% endfor %}
+    .d-block {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 8.5rem;
+        padding-top: 1.5rem;
+        box-shadow:none;
+    }
+
+    h5 {
+        color:#556959;
+    }
+
+    p {
+        color:#7d8e81;
+    }
+
+</style>
+    
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-label="Slide 14"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14" aria-label="Slide 15"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-label="Slide 16"></button>
+
+    </div>
+    <div class="carousel-inner">
+
+        <!-- first carousel item with class active -->
+      <div class="carousel-item active">
+        <a href="{% url 'monster_detail' 'Aptonoth' %}">
+        <img src="https://static.wikia.nocookie.net/monsterhunter/images/4/47/MHW-Aptonoth_Render_001.png/revision/latest/scale-to-width-down/1000?cb=20180209035147" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Aptonoth</h5>
+          <p>Docile herbivores that graze in packs. Their meat is considered a delicacy and is rich in nutrients. If one member of the herd is attacked, the rest will flee immediately.</p>
+        </div>
+      </div>
+
+      {% for monster in small_monsters %}
+        {% for mon in small_monster_images %}
+            {% if monster.name == mon.name %}
+        <div class="carousel-item">
+            <a href="{% url 'monster_detail' monster.name %}">
+            <img src="{{mon.image}}" class="d-block w-75 mx-auto border border-2 border-white border-opacity-25" alt="..." style="height:45rem">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>{{ monster.name }}</h5>
+            <p>{{ monster.description }}</p>
+            </div>
+            </a>
+        </div>
+            {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      <!-- This is carousel inner div -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 {% endblock %}

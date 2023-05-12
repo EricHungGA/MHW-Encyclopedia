@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Material_List_Item, Monster_Image
+from .models import Material_List_Item, Monster_Image, Small_Monster_Image
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -35,7 +35,8 @@ def large_monsters(request):
 
 def small_monsters(request):
     small_monsters=requests.get('https://mhw-db.com/monsters?q={"type":"small"}').json()
-    return render(request, 'small_monsters.html', {'small_monsters': small_monsters})
+    small_monster_images = Small_Monster_Image.objects.all()
+    return render(request, 'small_monsters.html', {'small_monsters': small_monsters, 'small_monster_images': small_monster_images})
 
 def monster_detail(request, monster_name):
     url = f'https://mhw-db.com/monsters?q={{"name":"{monster_name}"}}'

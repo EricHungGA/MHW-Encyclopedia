@@ -15,3 +15,7 @@ class Material_List_Item(models.Model):
 class Monster_Image(models.Model):
     name = models.CharField()
     image = models.CharField()
+
+class Small_Monster_Image(models.Model):
+    name = models.CharField()
+    image = models.CharField()
