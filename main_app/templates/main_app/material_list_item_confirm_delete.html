@@ -1,13 +1,72 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Delete Item</h1>
 
-  <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
+<style>
+  body {
+    color:#7d8e81;
+    background-image: url('https://res.cloudinary.com/di8ugfihk/image/upload/v1683929018/pngwing.com_alv0xb.png');
+    background-size:80vh;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 40%;
+  }
+  
+  .btn {
+    color:#7d8e81;
+    border-color:#7d8e81;
+    margin-bottom: 1rem;
+  }
+
+  .btn:hover {
+    opacity:0.4;
+  }
+
+  .main-container {
+    place-items: center;
+    padding-top: 15rem;
+  }
+
+  form {
+    display: grid;
+    place-items:center;
+  }
+
+  input {
+    width:20%;
+  }
+
+  .title {
+    padding-bottom: 1rem;
+    display:grid;
+    place-content:center;
+  }
+
+  label {
+    display:grid;
+    place-content:center;
+  }
+
+  textarea {
+    height:2rem;
+    width: 16rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color:#556959;
+  }
+</style>
+
+<div class="main-container">
+  <h3 class="title">Material Obtained</h3>
+
+  <p class="title">Have you gathered all the necessary materials?</p>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
-    <a href="{% url 'material_list' %}">Cancel</a>
+    <input type="submit" value="Yes - Remove from list" class="btn">
+    <a href="{% url 'material_list' %}">[ Go Back to List ]</a>
   </form>
+</div>
 {% endblock %}
