@@ -14,4 +14,6 @@ urlpatterns = [
     path('material_list_item/create', views.Material_List_ItemCreate.as_view(), name='material_list_item_create'),
     path('material_list_item/<int:pk>/delete/', views.Material_List_ItemDelete.as_view(), name='material_list_item_delete'),
     path('material_list_item/<int:pk>/update/', views.Material_List_ItemUpdate.as_view(), name='material_list_item_update'),
+    path('ecosystems/', views.ecosystems, name='ecosystems'),
+    path('ecosystems/ancient_forest/', views.ancient_forest, name='ancient_forest'),
 ]

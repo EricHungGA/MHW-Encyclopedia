@@ -50,12 +50,17 @@ def small_monster_detail(request, monster_name):
     monster_images = Small_Monster_Image.objects.all()
     return render(request, 'small_monster_detail.html', {'monster': monster, 'monster_images':monster_images})
 
-
-
 @login_required
 def material_list(request):
     user_material_list = Material_List_Item.objects.filter(user=request.user)
     return render(request, 'material_list.html', {'user_material_list':user_material_list})
+
+def ecosystems(request):
+    #ecosystem model info retrieval goes here
+    return render(request, 'ecosystems.html')
+
+def ancient_forest(request):
+    return render(request, 'ecosystem/ancient_forest.html')
 
 class Material_List_ItemCreate(LoginRequiredMixin, CreateView):
     model = Material_List_Item
