@@ -18,4 +18,5 @@ urlpatterns = [
     path('ecosystems/ancient_forest/', views.ancient_forest, name='ancient_forest'),
     path('ecosystems/wildspire_waste/', views.wildspire_waste, name='wildspire_waste'),
     path('ecosystems/coral_highlands/', views.coral_highlands, name='coral_highlands'),
+    path('ecosystems/rotten_vale', views.rotten_vale, name='rotten_vale'),
 ]

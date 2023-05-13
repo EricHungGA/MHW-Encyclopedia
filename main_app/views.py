@@ -68,6 +68,9 @@ def wildspire_waste(request):
 def coral_highlands(request):
     return render(request, 'ecosystem/coral_highlands.html')
 
+def rotten_vale(request):
+    return render(request, 'ecosystem/rotten_vale.html')
+
 class Material_List_ItemCreate(LoginRequiredMixin, CreateView):
     model = Material_List_Item
     fields = ['item']
