@@ -2,14 +2,68 @@
 
 {% block content %}
 
-<!-- Leaving the action empty makes the form post to the same url used to display it -->
-<form action="" method="POST">
-  {% csrf_token %}
-  <table>
-    <!-- Render the inputs inside of <tr>s & <td>s -->
-    {{ form.as_table }}
-  </table>
-  <input type="submit" value="Submit!" class="btn">
-</form>
+<style>
+  body {
+    color:#7d8e81;
+    background-image: url('https://res.cloudinary.com/di8ugfihk/image/upload/v1683929018/pngwing.com_alv0xb.png');
+    background-size:80vh;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 40%;
+  }
+  
+  .btn {
+    color:#7d8e81;
+    border-color:#7d8e81;
+  }
 
+  .btn:hover {
+    opacity:0.4;
+  }
+
+  .main-container {
+    place-items: center;
+    padding-top: 15rem;
+  }
+
+  form {
+    display: grid;
+    place-items:center;
+  }
+
+  input {
+    width:20%;
+  }
+
+  .title {
+    padding-bottom: 1rem;
+    display:grid;
+    place-content:center;
+  }
+
+  label {
+    display:grid;
+    place-content:center;
+  }
+
+  textarea {
+    height:2rem;
+    width: 16rem;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+<div class="main-container">
+  <h3 class="title">Monster Material</h3>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Add Monster Material" class="btn">
+  </form>
+</div>
 {% endblock %}
