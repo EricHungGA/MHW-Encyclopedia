@@ -16,4 +16,6 @@ urlpatterns = [
     path('material_list_item/<int:pk>/update/', views.Material_List_ItemUpdate.as_view(), name='material_list_item_update'),
     path('ecosystems/', views.ecosystems, name='ecosystems'),
     path('ecosystems/ancient_forest/', views.ancient_forest, name='ancient_forest'),
+    path('ecosystems/wildspire_waste/', views.wildspire_waste, name='wildspire_waste'),
+    path('ecosystems/coral_highlands/', views.coral_highlands, name='coral_highlands'),
 ]

@@ -62,6 +62,12 @@ def ecosystems(request):
 def ancient_forest(request):
     return render(request, 'ecosystem/ancient_forest.html')
 
+def wildspire_waste(request):
+    return render(request, 'ecosystem/wildspire_waste.html')
+
+def coral_highlands(request):
+    return render(request, 'ecosystem/coral_highlands.html')
+
 class Material_List_ItemCreate(LoginRequiredMixin, CreateView):
     model = Material_List_Item
     fields = ['item']
