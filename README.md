@@ -5,9 +5,9 @@
 
 <br>
 
-<p>Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.</p>
+<p class='para'>Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.</p>
 
-<p>Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung</a></p>
+<p class='para'>Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung</a></p>
 
 <hr>
 
@@ -69,8 +69,8 @@ As a user you'll be able to register as a Hunter and gain access to your own per
 </center>
 
 <style>
-    p {
-        font-size: 18px;
+p {
+    font-size: 18px;
 }
 body {
     font-size: 12px;
@@ -82,6 +82,10 @@ h4 {
 
 h1 {
     font-size: 40px;
+}
+
+.para {
+    font-size: 18px;
 }
 
 </style>
