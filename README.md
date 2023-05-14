@@ -5,11 +5,11 @@
 
 <br>
 
+
+<hr>
 <p class='para'>Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.</p>
 
 <p class='para'>Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung</a></p>
-
-<hr>
 
 <h4>Description</h4>
 <p>MHW (Monster Hunter World) Encyclopedia is a website that holds a collection of monsters large and small from the game Monster Hunter World released by Capcom in 2018. This application was built upon the technologies of Django and Python utilizing Postgresql as it's database, and aims to be a stylish academic-inspired alternative to wikis where players and non-players alike can educate themselves on the monsters and environments. 
