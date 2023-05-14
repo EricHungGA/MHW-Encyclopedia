@@ -3,8 +3,7 @@
 <h1> MHW-Encyclopedia<h1>
 <img src='https://res.cloudinary.com/di8ugfihk/image/upload/v1684003006/diablos_info_ie73od.jpg'></img>
 
-<br>
-
+<br></br>
 
 <hr>
 <p class='para'>Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.</p>
