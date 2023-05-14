@@ -149,9 +149,9 @@ nav ul li a:hover {
 
   #carousel div img:hover {
     transform: translateZ(0) scale(1.005);
-    opacity: .6;
-    filter: gray;
-    -webkit-filter: grayscale(1);
+    opacity: 1;
+    filter: green;
+    -webkit-filter: grayscale(0.5);
     -webkit-transition: all .8s ease-in-out;
   }
   
