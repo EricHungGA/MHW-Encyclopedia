@@ -3,20 +3,19 @@
 <h1> MHW-Encyclopedia<h1>
 <img src='https://res.cloudinary.com/di8ugfihk/image/upload/v1684003006/diablos_info_ie73od.jpg'></img>
 
-<br></br>
-
 <hr>
-Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.
-
-Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung</a>
 
 <h4>Description</h4>
+Learn about etymology and the lifestyles of creatures that exist within the vast Monster Hunter World, and dive into the ecosystems that support the unique lifeforms which draw inspiration from ours and fantasy.
+    <br></br>
 <p>MHW (Monster Hunter World) Encyclopedia is a website that holds a collection of monsters large and small from the game Monster Hunter World released by Capcom in 2018. This application was built upon the technologies of Django and Python utilizing Postgresql as it's database, and aims to be a stylish academic-inspired alternative to wikis where players and non-players alike can educate themselves on the monsters and environments. 
 <br></br>
 Within the encyclopedia you will also find exclusive information about the monster's ecology, habits, and hierachical structures visualized by food chains. You can find articles that meticulously peruse over all the history and known studies about the places these monsters inhabit and how they came to be. 
 <br></br>
 As a user you'll be able to register as a Hunter and gain access to your own personal material gathering list to help you stay organized when playing through the game and micro-managing materials, as well as view what weaknesses a monster might have to certain attributes and situations. 
-</hp>
+<br></br>
+Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung</a>.    
+</p>
 
 <br>
 <h4>Resources & Links</h4>
@@ -66,33 +65,6 @@ As a user you'll be able to register as a Hunter and gain access to your own per
 
 <h4>Code Snippets</h4>
 </center>
-
-<style>
-p {
-    font-size: 18px;
-}
-body {
-    font-size: 12px;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-.para {
-    font-size: 18px;
-}
-
-div {
-    font-size: 18px;
-}
-
-</style>
-
     
     def monster_detail(request, monster_name):
     url = f'https://mhw-db.com/monsters?q={{"name":"{monster_name}"}}'
