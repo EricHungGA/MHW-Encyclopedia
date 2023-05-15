@@ -102,7 +102,6 @@ The above is the code used to implement the carousel design on the large monster
 <h4>Future Enhancements</h4>
 <br>
 <ul>
-<li><p>Adding searchbar functionality</p></li>
 <li><p>Adding a Design-about page detailing color palettes and database structures</p></li>
 <li><p>Updating the database to include most up to date monsters including the newest expansion</p></li>
 <li><p>Adding the weapon library into the database and displaying them</p></li>
