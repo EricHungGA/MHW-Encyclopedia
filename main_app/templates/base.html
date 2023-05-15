@@ -54,7 +54,9 @@
     <!-- template for search cards -->
     <template data-monster-template>
       <div class="card hide">
+        <a href="" target="_blank">
         <div class="header" data-header></div>
+        </a>
       </div>
     </template>
 
@@ -158,7 +160,17 @@
         monsters = data.map(monster => {
           const card = monsterCardTemplate.content.cloneNode(true).children[0]
           const header = card.querySelector("[data-header]")
+          const link = card.querySelector("a")
           header.textContent = monster.name
+          if (monster.type === 'small'){
+            link.href = `https://mhw-encyclopedia.herokuapp.com/small_monster/${monster.name.replace(/\s/g, "%20")}/`
+          } else {
+            link.href = `https://mhw-encyclopedia.herokuapp.com/monster/${monster.name.replace(/\s/g, "%20")}/`
+          }
+          link.addEventListener("click", (e) => {
+            e.preventDefault()
+            window.location.href = link.href
+          })
           monsterCardContainer.append(card)
           return { name: monster.name, element: card}
         })
@@ -168,7 +180,7 @@
     </script>
 
     <style>
-      .monster-cards {
+  .monster-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: .25rem;
@@ -198,6 +210,10 @@ input {
 label {
   color: #bdc3be;
   padding-right: .5rem;
+}
+
+a > .card {
+  color: #3c4d31;
 }
     </style>
 
