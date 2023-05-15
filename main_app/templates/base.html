@@ -29,6 +29,14 @@
     </a>
     <div class="menu">
       <ul>
+        <li>
+          <div class="search-wrapper">
+            <label for="search">Search </label>
+            <input type="search" id="search" data-search>
+          </div>
+          <div class="monster-cards" data-monster-cards-container>
+          </div>
+        </li>
         <li><a href="{% url 'ecosystems' %}">Ecosystems</a></li>
         <li><a href="{% url 'large_monsters' %}">Large Monsters</a></li>
         <li><a href="{% url 'small_monsters' %}">Small Monsters</a></li>
@@ -43,6 +51,12 @@
   </nav>
   </div>
     </header>
+    <!-- template for search cards -->
+    <template data-monster-template>
+      <div class="card hide">
+        <div class="header" data-header></div>
+      </div>
+    </template>
 
     <main class="content">
         {% block content %}
@@ -97,7 +111,7 @@
 <!-- End of .container -->
 
     </footer>
-    <script>
+    <!-- <script>
        $(document).ready(function() {
             $(".menu-icon").on("click", function() {
                   $("nav ul").toggleClass("showing");
@@ -115,7 +129,78 @@
                   $('nav').removeClass('black');
             }
       })
+    </script> -->
+    
+    <script>
+      const monsterCardTemplate = document.querySelector("[data-monster-template]")
+      const monsterCardContainer = document.querySelector("[data-monster-cards-container]")
+      const searchInput = document.querySelector("[data-search]")
+
+      let monsters = []
+
+      searchInput.addEventListener("input", (e) => {
+        const value = e.target.value.toLowerCase()
+        if (value.length > 0) {
+          monsters.forEach( monster => {
+            const isVisible = monster.name.toLowerCase().includes(value)
+            monster.element.classList.toggle("hide", !isVisible)
+          })
+        } else {
+          monsters.forEach(monster => {
+            monster.element.classList.add("hide")
+          })
+        }
+      })
+
+      fetch('https://mhw-db.com/monsters')
+      .then(res => res.json())
+      .then(data => {
+        monsters = data.map(monster => {
+          const card = monsterCardTemplate.content.cloneNode(true).children[0]
+          const header = card.querySelector("[data-header]")
+          header.textContent = monster.name
+          monsterCardContainer.append(card)
+          return { name: monster.name, element: card}
+        })
+      })
+
+
     </script>
+
+    <style>
+      .monster-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
+}
+
+input {
+  font-size: 1rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.card {
+  display: grid;
+  place-content: center;
+  border: 1px solid white;
+  background-color: white;
+  padding: .5rem;
+  height: 2rem;
+  color:#3c4d31;
+}
+
+.card > header {
+  margin-bottom: .25rem;
+}
+
+label {
+  color: #bdc3be;
+  padding-right: .5rem;
+}
+    </style>
+
     <script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>

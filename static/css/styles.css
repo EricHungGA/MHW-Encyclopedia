@@ -250,3 +250,7 @@ p.element5{
 footer {
   opacity:0.75;
 }
+
+.hide {
+  display: none !important;
+}
