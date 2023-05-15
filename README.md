@@ -56,6 +56,12 @@ Built & Designed By <a href='https://www.linkedin.com/in/erichungdev/'>Eric Hung
 <br></br>
 <p>Once logged in as a registered user this is the view where you will be able to customize your material list and manage them depending on the status of the materials. This is intended to be used by players who are active in the game to allow for real-time material management in sync with the game's wishlist system which is not built out for full on customizability.</p>
 <br>
+<h4>Search Functionality</h4>
+<br>
+<img src='https://res.cloudinary.com/di8ugfihk/image/upload/v1684117340/Screenshot_2023-05-14_at_7.20.28_PM_uothez.png'>
+<br></br>
+<p>The searchbar allows users to search through the database for any monsters regardless of type, through their name field non-case sensitive. The results are clickable links that will direct the user towards that particular monster's detail page.</p>
+<br>
 <h4>Ecosystems & Articles</h4>
 <br>
 <img src='https://res.cloudinary.com/di8ugfihk/image/upload/v1684040841/Screenshot_2023-05-13_at_10.07.05_PM_yvyznu.png'>
