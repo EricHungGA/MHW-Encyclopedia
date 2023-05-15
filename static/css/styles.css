@@ -1,256 +1,256 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Fogtwo No.5', sans-serif;
-    color:#7d8e81;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Fogtwo No.5', sans-serif;
+  color:#7d8e81;
 }
 
 body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, #c7b8bd 0.05em, transparent 0.05em), linear-gradient(to bottom, #c7b8bd 0.05em, transparent 0.05em), linear-gradient(to right, black 0.01em, transparent 0.01em), linear-gradient(to bottom, black 0.01em, transparent 0.01em);
-  background-size: 30px 30px, 30px 30px, 50px 50px, 50px 50px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  opacity: 0.1;
-  z-index: -1;
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(to right, #c7b8bd 0.05em, transparent 0.05em), linear-gradient(to bottom, #c7b8bd 0.05em, transparent 0.05em), linear-gradient(to right, black 0.01em, transparent 0.01em), linear-gradient(to bottom, black 0.01em, transparent 0.01em);
+background-size: 30px 30px, 30px 30px, 50px 50px, 50px 50px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+opacity: 0.1;
+z-index: -1;
 }
 
 body {
-  font-family: 'Fogtwo No.5', sans-serif;
-  font-weight: lighter;
-  position: relative;
-  background-color: #0a170b !important;
-  min-height: 100vh;
+font-family: 'Fogtwo No.5', sans-serif;
+font-weight: lighter;
+position: relative;
+background-color: #0a170b !important;
+min-height: 100vh;
 }
 
 main {
-  min-height: 100vh;
+min-height: 100vh;
 }
 
 .logo {
-    line-height: 60px;
-    float: left;
-    margin: 16px 46px;
-    color: #556959;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 2px;
+  line-height: 60px;
+  float: left;
+  margin: 16px 46px;
+  color: #556959;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 nav {
-    width: 100%;
-    line-height: 60px;
-    z-index: 20;
-    opacity:0.75;
+  width: 100%;
+  line-height: 60px;
+  z-index: 20;
+  opacity:0.75;
 }
 
 nav ul {
-    line-height: 60px;
-    list-style: none;
-    background: rgba(0, 0, 0, 0);
-    color: black;
-    padding: 0;
-    text-align: right;
-    margin: 0;
-    padding-right: 30px;
-    transition: 1s;
+  line-height: 60px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  color: black;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 30px;
+  transition: 1s;
 }
 
 nav.black ul {
-    background: dark;
-    opacity: 80%;
+  background: dark;
+  opacity: 80%;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 16px 30px;;
+  display: inline-block;
+  padding: 16px 30px;;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #bdc3be;
-    font-size: 16px;
+  text-decoration: none;
+  color: #bdc3be;
+  font-size: 16px;
 }
 
 nav ul li a:hover {
-  color:#3c4d31;
+color:#3c4d31;
 }
 
 .menu-icon {
-    line-height: 60px;
-    width: 100%;
-    background: #000;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 15px 24px;
-    cursor: pointer;
-    color: black;
-    display: none;
+  line-height: 60px;
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: black;
+  display: none;
 }
 
 @media(max-width: 786px) {
 
-    .logo {
-          position: fixed;
-          top: 0;
-          margin-top: 16px;
-    }
+  .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+  }
 
-    nav ul {
-          max-height: 0px;
-          background: #000;
-    }
+  nav ul {
+        max-height: 0px;
+        background: #000;
+  }
 
-    nav.black ul {
-          background: #000;
-    }
+  nav.black ul {
+        background: #000;
+  }
 
-    .showing {
-          max-height: 34em;
-    }
+  .showing {
+        max-height: 34em;
+  }
 
-    nav ul li {
-          box-sizing: border-box;
-          width: 100%;
-          padding: 24px;
-          text-align: center;
-    }
+  nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+  }
 
-    .menu-icon {
-          display: block;
-    }
+  .menu-icon {
+        display: block;
+  }
 
 }
 
 #carousel {
-    position: relative;
-    height: 800px;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-  }
-  
-  #carousel div {
-    position: absolute;
-    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-    opacity: 1;
-  }
-  
-  #carousel div img {
-    width: 400px;
-    transition: width 1s;
-  }
+  position: relative;
+  height: 800px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
 
-  #carousel div img:hover {
-    transform: translateZ(0) scale(1.005);
-    opacity: 1;
-    filter: green;
-    -webkit-filter: grayscale(0.5);
-    -webkit-transition: all .8s ease-in-out;
-  }
-  
-  #carousel div.hideLeft {
-    left: 0%;
-    opacity: 0;
-    transform: translateY(50%) translateX(-50%);
-  }
-  
-  #carousel div.hideLeft img {
-    width: 200px;
-  }
-  
-  #carousel div.hideRight {
-    left: 100%;
-    opacity: 0;
-    transform: translateY(50%) translateX(-50%);
-  }
-  
-  #carousel div.hideRight img {
-    width: 200px;
-  }
-  
-  #carousel div.prev {
-    z-index: 5;
-    left: 30%;
-    transform: translateY(50px) translateX(-50%);
-  }
-  
-  #carousel div.prev img {
-    width: 300px;
-  }
-  
-  #carousel div.prevLeftSecond {
-    z-index: 4;
-    left: 15%;
-    transform: translateY(50%) translateX(-50%);
-    opacity: .7;
-  }
-  
-  #carousel div.prevLeftSecond img {
-    width: 200px;
-  }
-  
-  #carousel div.selected {
-    z-index: 10;
-    left: 50%;
-    transform: translateY(0px) translateX(-50%);
-  }
-  
-  #carousel div.next {
-    z-index: 5;
-    left: 70%;
-    transform: translateY(50px) translateX(-50%);
-  }
-  
-  #carousel div.next img {
-    width: 300px;
-  }
-  
-  #carousel div.nextRightSecond {
-    z-index: 4;
-    left: 85%;
-    transform: translateY(50%) translateX(-50%);
-    opacity: .7;
-  }
-  
-  #carousel div.nextRightSecond img {
-    width: 200px;
-  }
-  
-  /* .buttons {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px;
-  } */
+#carousel div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
 
-  .buttons {
-    margin-top: 15rem;
-  }
-  
+#carousel div img {
+  width: 400px;
+  transition: width 1s;
+}
+
+#carousel div img:hover {
+  transform: translateZ(0) scale(1.005);
+  opacity: 1;
+  filter: green;
+  -webkit-filter: grayscale(0.5);
+  -webkit-transition: all .8s ease-in-out;
+}
+
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideLeft img {
+  width: 200px;
+}
+
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideRight img {
+  width: 200px;
+}
+
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.prev img {
+  width: 300px;
+}
+
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: .7;
+}
+
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+  width: 300px;
+}
+
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: .7;
+}
+
+#carousel div.nextRightSecond img {
+  width: 200px;
+}
+
+/* .buttons {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+} */
+
+.buttons {
+  margin-top: 15rem;
+}
+
 p.element5{
-    display: inline;
-    margin-right: 2px;
+  display: inline;
+  margin-right: 2px;
 }
 
 .strike-through {
-    text-decoration: line-through;
-  }
-  
+  text-decoration: line-through;
+}
+
 .home-carousel-title {
-  color: #7d8e81;
-  font-size: 1.4rem;
+color: #7d8e81;
+font-size: 1.4rem;
 }
 
 footer {
-  opacity:0.75;
+opacity:0.75;
 }
 
 .hide {
-  display: none !important;
+display: none !important;
 }

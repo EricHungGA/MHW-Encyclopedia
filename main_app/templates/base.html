@@ -38,9 +38,11 @@
           </div>
         </li>
         <li><a href="{% url 'ecosystems' %}">Ecosystems</a></li>
-        <li><a href="{% url 'large_monsters' %}">Large Monsters</a></li>
-        <li><a href="{% url 'small_monsters' %}">Small Monsters</a></li>
-        <li><a href="{% url 'material_list' %}">Personal Material List</a></li>
+        <!-- adding this back after project presentation with dropdown functionality -->
+        <!-- <li><a href="{% url 'large_monsters' %}">Large Monsters</a></li>
+        <li><a href="{% url 'small_monsters' %}">Small Monsters</a></li> -->
+        <li><a href="{% url 'home' %}">Monsters</a></li>
+        <li><a href="{% url 'material_list' %}">Your Material List</a></li>
         {% if user.is_authenticated %}
           <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
@@ -191,6 +193,7 @@ input {
   font-size: 1rem;
   height: 2rem;
   border-radius: 0.3rem;
+  width: 6.5rem;
 }
 
 .card {
@@ -214,6 +217,10 @@ label {
 
 a > .card {
   color: #3c4d31;
+}
+
+.search-wrapper {
+  display:inline-block;
 }
     </style>
 
