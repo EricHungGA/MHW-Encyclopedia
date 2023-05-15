@@ -165,10 +165,6 @@
   z-index: 100000; /* Above WP toolbar */
 }
 
-/*--------------------------------------------------------------
-Typography
---------------------------------------------------------------*/
-
 body {
   margin: 0;
   font-size: 18px;
@@ -193,11 +189,6 @@ figure {
   margin: 0;
   padding: 0;
 }
-
-
-/*--------------------------------------------------------------
-General styling
---------------------------------------------------------------*/
 
 h1,
 h2,
@@ -224,8 +215,6 @@ img {
     padding:3.2rem 0;
 }
 
-/* Splash section */
-
 .splash {
   background: #B0A4A4;
   padding-bottom: 2em;
@@ -245,8 +234,6 @@ img {
     padding-top: 0;
   }
 }
-
-/* Buckets section */
 
 .buckets {
   padding: 2em 1em 1em;
@@ -268,8 +255,6 @@ img {
   padding: 1.5em;
 }
 
-/* More section */
-
 .more {
   padding: 2em;
 }
@@ -277,8 +262,6 @@ img {
 .more-content {
   padding: 1.5em;
 }
-
-/* Twins section */
 
 .sidebar {
   background: hsl(0, 0%, 90%);
@@ -298,7 +281,6 @@ img {
   padding: .5em;
 }
 
-/* Colophon section */
 .colophon {
   padding: 2em;
   background: hsl(0, 0%, 10%);
@@ -315,11 +297,6 @@ img {
   border-bottom: 1px solid white;
 }
 
-
-/*--------------------------------------------------------------
-Use flex to create a three-bucket layout
---------------------------------------------------------------*/
-
 @media screen and (min-width: 700px) {
   @supports (display: flex) {
 
@@ -335,18 +312,10 @@ Use flex to create a three-bucket layout
   }
 }
 
-/*--------------------------------------------------------------
-Basic responsive layout for all browsers:
---------------------------------------------------------------*/
-
 .site {
   max-width: 50em;
   margin: 0 auto;
 }
-
-/*--------------------------------------------------------------
-CSS Grid layout for modern browsers:
---------------------------------------------------------------*/
 
 @supports (grid-area: auto) {
 

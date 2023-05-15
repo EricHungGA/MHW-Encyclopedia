@@ -103,10 +103,8 @@
         <i class="fab fa-github"></i>
       </a>
     </section>
-    <!-- Section: Social media -->
   </div>
   <!-- Grid container -->
-
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2023 Monster Hunter World Encyclopedia 
@@ -114,27 +112,9 @@
   <!-- Copyright -->
 <!-- End of .container -->
 
-    </footer>
-    <!-- <script>
-       $(document).ready(function() {
-            $(".menu-icon").on("click", function() {
-                  $("nav ul").toggleClass("showing");
-            });
-      });
-
-      // Scrolling Effect
-
-      $(window).on("scroll", function() {
-            if($(window).scrollTop()) {
-                  $('nav').addClass('black');
-            }
-
-            else {
-                  $('nav').removeClass('black');
-            }
-      })
-    </script> -->
+</footer>
     
+<!-- this is script for the search bar -->
     <script>
       const monsterCardTemplate = document.querySelector("[data-monster-template]")
       const monsterCardContainer = document.querySelector("[data-monster-cards-container]")
@@ -177,11 +157,10 @@
           return { name: monster.name, element: card}
         })
       })
-
-
     </script>
 
-    <style>
+<style>
+
   .monster-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -222,8 +201,9 @@ a > .card {
 .search-wrapper {
   display:inline-block;
 }
-    </style>
 
-    <script src="//localhost:35729/livereload.js"></script>
+</style>
+
+<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>

@@ -9,9 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 def home(request):
-    response=requests.get('https://mhw-db.com/monsters/2').json()
     all_monsters=requests.get('https://mhw-db.com/monsters').json()
-    return render(request, 'home.html', {'monster_1': response, 'all_monsters': all_monsters})
+    return render(request, 'home.html', {'all_monsters': all_monsters})
 
 def signup(request):
     error_message = ''
@@ -56,7 +55,6 @@ def material_list(request):
     return render(request, 'material_list.html', {'user_material_list':user_material_list})
 
 def ecosystems(request):
-    #ecosystem model info retrieval goes here
     return render(request, 'ecosystems.html')
 
 def ancient_forest(request):
